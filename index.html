@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel & Suites | Confort y Privacidad</title>
+    <style>
+        :root {
+            --primario: #2c3e50; 
+            --dorado: #d4af37;
+            --fondo: #fdfdfd;
+            --texto: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background-color: var(--fondo);
+            color: var(--texto);
+        }
+
+        /* Hero */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('fachada.png'); /* Asegúrate que el nombre coincida */
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 { font-size: 3.5rem; margin: 0; }
+
+        .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+
+        /* Habitaciones */
+        .grid-habitaciones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+        }
+
+        .card img { width: 100%; height: 220px; object-fit: cover; }
+
+        .card-content { padding: 20px; }
+        .card-content h3 { color: var(--primario); margin-top: 0; }
+        
+        .tags { font-size: 0.85rem; color: #666; margin-bottom: 10px; }
+        .precio { color: var(--dorado); font-weight: bold; font-size: 1.1rem; display: block; margin-top: 10px; }
+
+        /* Servicios */
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Botón WhatsApp Flotante */
+        .float-ws {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        footer { background: var(--primario); color: white; text-align: center; padding: 30px; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tu Descanso Merecido</h1>
+        <p>Habitaciones con King Size, Jacuzzi y total privacidad</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2 style="text-align: center; color: var(--primario);">Nuestras Habitaciones</h2>
+            <p style="text-align: center;">Todas cuentan con: Aire acondicionado, TV por cable, Sala de estar y Agua caliente.</p>
+            
+            <div class="grid-habitaciones">
+                <div class="card">
+                    <img src="sencilla.jpg" alt="Habitación Sencilla">
+                    <div class="card-content">
+                        <h3>Habitación Sencilla</h3>
+                        <div class="tags">1 Cama King Size • Cochera Privada</div>
+                        <span class="precio">$600 MXN / Día</span>
+                        <small>Desde $250 MXN por 2 horas</small>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="doble.jpg" alt="Habitación Doble">
+                    <div class="card-content">
+                        <h3>Habitación Doble</h3>
+                        <div class="tags">2 Camas King Size • Espaciosa</div>
+                        <span class="precio">$600 MXN / Día</span>
+                        <small>Desde $250 MXN por 2 horas</small>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="especial.jpg" alt="Habitación Especial">
+                    <div class="card-content">
+                        <h3>Habitación Especial</h3>
+                        <div class="tags">2 Camas • Jacuzzi • Máximo Lujo</div>
+                        <span class="precio">$700 MXN (4 horas)</span>
+                        <small>Consulta precio por día</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 50px;">
+            <h2 style="text-align: center; color: var(--primario);">Servicios Incluidos</h2>
+            <div class="servicios-grid">
+                <div>🚗 Estacionamiento</div>
+                <div>🅿️ Cochera Privada</div>
+                <div>🚿 Agua Caliente</div>
+            </div>
+        </section>
+
+        <section style="margin-top: 50px; background: #eee; padding: 20px; border-radius: 10px;">
+            <h3>Información Importante</h3>
+            <ul>
+                <li>Entrada disponible las 24 horas.</li>
+                <li>Reservas por día: Desocupar antes de las 11:00 a.m. del día siguiente.</li>
+                <li>Contamos con tarifas especiales por 2, 3 y 4 horas.</li>
+            </ul>
+        </section>
+    </div>
+
+    <a href="https://wa.me/52XXXXXXXXXX?text=Hola,%20quisiera%20consultar%20disponibilidad" class="float-ws" target="_blank">
+        💬 ¡Reserva por WhatsApp!
+    </a>
+
+    <footer>
+        <p>📍 Dirección del Hotel, Ciudad, México</p>
+        <p>&copy; 2026 Hotel & Suites - Calidad y Discreción</p>
+    </footer>
+
+</body>
+</html>
