@@ -3,166 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel & Suites | Confort y Privacidad</title>
-    <style>
-        :root {
-            --primario: #2c3e50; 
-            --dorado: #d4af37;
-            --fondo: #fdfdfd;
-            --texto: #333;
-        }
-
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            background-color: var(--fondo);
-            color: var(--texto);
-        }
-
-        /* Hero */
-        header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('fachada.png'); /* Asegúrate que el nombre coincida */
-            background-size: cover;
-            background-position: center;
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        header h1 { font-size: 3.5rem; margin: 0; }
-
-        .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
-
-        /* Habitaciones */
-        .grid-habitaciones {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 1px solid #eee;
-        }
-
-        .card img { width: 100%; height: 220px; object-fit: cover; }
-
-        .card-content { padding: 20px; }
-        .card-content h3 { color: var(--primario); margin-top: 0; }
-        
-        .tags { font-size: 0.85rem; color: #666; margin-bottom: 10px; }
-        .precio { color: var(--dorado); font-weight: bold; font-size: 1.1rem; display: block; margin-top: 10px; }
-
-        /* Servicios */
-        .servicios-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        /* Botón WhatsApp Flotante */
-        .float-ws {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-        }
-
-        footer { background: var(--primario); color: white; text-align: center; padding: 30px; margin-top: 50px; }
-    </style>
+    <title>Inter Motel | Privacidad y Confort</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Tu Descanso Merecido</h1>
-        <p>Habitaciones con King Size, Jacuzzi y total privacidad</p>
+        <h1>INTER MOTEL</h1>
+        <p>Privacidad • Higiene • Confort</p>
     </header>
 
     <div class="container">
-        <section>
-            <h2 style="text-align: center; color: var(--primario);">Nuestras Habitaciones</h2>
-            <p style="text-align: center;">Todas cuentan con: Aire acondicionado, TV por cable, Sala de estar y Agua caliente.</p>
-            
-            <div class="grid-habitaciones">
-                <div class="card">
-                    <img src="sencilla.jpg" alt="Habitación Sencilla">
-                    <div class="card-content">
-                        <h3>Habitación Sencilla</h3>
-                        <div class="tags">1 Cama King Size • Cochera Privada</div>
-                        <span class="precio">$600 MXN / Día</span>
-                        <small>Desde $250 MXN por 2 horas</small>
-                    </div>
-                </div>
+        
+        <h2>Conócenos</h2>
+        <div class="conocenos-texto">
+            <p>Bienvenido a <strong>Inter Motel</strong>, el refugio perfecto en San Luis Río Colorado diseñado para quienes buscan una experiencia de descanso superior, total discreción y la máxima higiene. Ubicados estratégicamente en la Av. Captain Carlos G. Calles, ofrecemos instalaciones modernas con cocheras privadas y un servicio de primera clase disponible las 24 horas. Ya sea que busques una estancia rápida o una noche de relajación completa, aquí encontrarás el confort que mereces.</p>
+        </div>
+        <div class="video-contenedor">
+            <video controls poster="Instalaciones/portada_video.png" style="width: 100%; display: block;">
+                <source src="video.mp4" type="video/mp4">
+                Tu navegador no soporta video.
+            </video>
+        </div>
 
-                <div class="card">
-                    <img src="doble.jpg" alt="Habitación Doble">
-                    <div class="card-content">
-                        <h3>Habitación Doble</h3>
-                        <div class="tags">2 Camas King Size • Espaciosa</div>
-                        <span class="precio">$600 MXN / Día</span>
-                        <small>Desde $250 MXN por 2 horas</small>
-                    </div>
-                </div>
+        <h2>Instalaciones</h2>
+        <div class="grid-general">
+            <div class="card" onclick="zoomImg('Instalaciones/fachada2.png')">
+                <img src="Instalaciones/fachada2.png" alt="Exterior">
+                <div class="card-content"><h3>Exterior</h3></div>
+            </div>
+            <div class="card" onclick="zoomImg('Instalaciones/recepcion.png')">
+                <img src="Instalaciones/recepcion.png" alt="Recepción">
+                <div class="card-content"><h3>Recepción</h3></div>
+            </div>
+            <div class="card" onclick="zoomImg('Instalaciones/estacionamiento.png')">
+                <img src="Instalaciones/estacionamiento.png" alt="Estacionamientos">
+                <div class="card-content"><h3>Estacionamientos</h3></div>
+            </div>
 
-                <div class="card">
-                    <img src="especial.jpg" alt="Habitación Especial">
-                    <div class="card-content">
-                        <h3>Habitación Especial</h3>
-                        <div class="tags">2 Camas • Jacuzzi • Máximo Lujo</div>
-                        <span class="precio">$700 MXN (4 horas)</span>
-                        <small>Consulta precio por día</small>
+        </div>
+
+        <h2>Nuestras Suites</h2>
+        <div class="grid-general">
+            <div class="card" onclick="openModal('mSencilla')">
+                <img src="Sencilla/sencilla.png" alt="Sencilla">
+                <div class="card-content">
+                    <h3>Suite Sencilla (2 Pers.)</h3>
+                    <div class="tabla-precios">
+                        <div class="fila-precio"><span>4 Horas:</span> <span class="monto">$400</span></div>
+                        <div class="fila-precio"><span>Noche (Lun-Jue):</span> <span class="monto">$650</span></div>
+                        <div class="fila-precio"><span>Vie-Dom:</span> <span class="monto">Solo por horas</span></div>
                     </div>
+                    <span class="ver-mas">Ver fotos y detalles →</span>
                 </div>
             </div>
-        </section>
 
-        <section style="margin-top: 50px;">
-            <h2 style="text-align: center; color: var(--primario);">Servicios Incluidos</h2>
-            <div class="servicios-grid">
-                <div>🚗 Estacionamiento</div>
-                <div>🅿️ Cochera Privada</div>
-                <div>🚿 Agua Caliente</div>
+            <div class="card" onclick="openModal('mDoble')">
+                <img src="Doble/doble.png" alt="Doble">
+                <div class="card-content">
+                    <h3>Suite Doble (4 Pers.)</h3>
+                    <div class="tabla-precios">
+                        <div class="fila-precio"><span>Noche (Lun-Jue):</span> <span class="monto">$900</span></div>
+                        <div class="fila-precio"><span>4 Horas (Vie-Dom):</span> <span class="monto">$500</span></div>
+                        <div class="fila-precio"><span>Vie-Dom:</span> <span class="monto">Solo por horas</span></div>
+                    </div>
+                    <span class="ver-mas">Ver fotos y detalles →</span>
+                </div>
             </div>
-        </section>
 
-        <section style="margin-top: 50px; background: #eee; padding: 20px; border-radius: 10px;">
-            <h3>Información Importante</h3>
-            <ul>
-                <li>Entrada disponible las 24 horas.</li>
-                <li>Reservas por día: Desocupar antes de las 11:00 a.m. del día siguiente.</li>
-                <li>Contamos con tarifas especiales por 2, 3 y 4 horas.</li>
-            </ul>
+            <div class="card" onclick="openModal('mJacuzzi')">
+                <img src="Jacuzzi/jacuzzi.png" alt="Jacuzzi">
+                <div class="card-content">
+                    <h3>Suite Con Jacuzzi (2 Pers.)</h3>
+                    <div class="tabla-precios">
+                        <div class="fila-precio"><span>4 Horas:</span> <span class="monto">$800</span></div>
+                        <div class="fila-precio"><span>12 Horas:</span> <span class="monto">$1,600</span></div>
+                    </div>
+                    <span class="ver-mas">Ver fotos y detalles →</span>
+                </div>
+            </div>
+        </div>
+
+        <h2>Nuestra Ubicación</h2>
+        <div class="mapa-contenedor">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.1741517409266!2d-114.74938392435252!3d32.474189473315754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x81314fc42bd034e3%3A0xcd803f6d3fb1fbb3!2sINTER%20MOTEL!5e0!3m2!1ses-419!2smx!4v1709123456789!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <section class="extra-info">
+            <div>
+                <h3>Personas y Horas Extras</h3>
+                <p><strong>Sencilla:</strong> $150 mxn | <strong>Doble y Jacuzzi:</strong> $200 mxn</p>
+                <p><em>Máximo 2 personas extras por habitación.</em></p>
+            </div>
+            <div>
+                <h3>Reglas e Información</h3>
+                <ul>
+                    <li>Sin reservaciones (Conforme van llegando).</li>
+                    <li>Salida de renta por noche: 11:00 a.m.</li>
+                    <li>Ambiente libre de humo de cigarrillo.</li>
+                    <li>Servicio las 24 horas, los 365 días del año.</li>
+                </ul>
+            </div>
         </section>
     </div>
 
-    <a href="https://wa.me/52XXXXXXXXXX?text=Hola,%20quisiera%20consultar%20disponibilidad" class="float-ws" target="_blank">
-        💬 ¡Reserva por WhatsApp!
-    </a>
+    <div id="mSencilla" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('mSencilla')">×</span>
+            <h3>Detalles Suite Sencilla</h3>
+            <p>Diseñada para el descanso individual o en pareja, nuestra Suite Sencilla ofrece un ambiente íntimo y acogedor.</p>
+            <ul>
+                <li>Equipada con una confortable <strong>Cama King Size</strong>.</li>
+                <li>Entretenimiento con TV de pantalla plana y servicio de <strong>cable</strong>.</li>
+                <li>Baño privado con ducha de <strong>agua caliente</strong> las 24 horas.</li>
+                <li>Máxima discreción con <strong>cochera exclusiva</strong> y acceso directo a la habitación.</li>
+            </ul>
+            <div class="modal-fotos">
+                <img src="Sencilla/sencilla.png" onclick="zoomImg(this.src)">
+                <img src="Sencilla/sencilla2.png" onclick="zoomImg(this.src)">
+                <img src="Sencilla/sencilla3.png" onclick="zoomImg(this.src)">
+                <img src="Sencilla/sencilla4.png" onclick="zoomImg(this.src)">
+                <img src="Sencilla/sencilla5.png" onclick="zoomImg(this.src)">
+                <img src="Sencilla/sencilla6.png" onclick="zoomImg(this.src)">
+                <img src="Sencilla/sencilla7.png" onclick="zoomImg(this.src)">
+                <img src="Sencilla/sencilla8.png" onclick="zoomImg(this.src)">
+            </div>
+        </div>
+    </div>
+
+    <div id="mDoble" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('mDoble')">×</span>
+            <h3>Detalles Suite Doble</h3>
+            <p>El espacio ideal para grupos o estancias prolongadas, combinando amplitud y funcionalidad.</p>
+            <ul>
+                <li>Disposición de <strong>dos Camas King Size</strong> para un descanso placentero.</li>
+                <li>Sistema de TV con una amplia variedad de canales por <strong>cable</strong>.</li>
+                <li>Servicios esenciales que incluyen baño con ducha y suministro de <strong>agua caliente</strong>.</li>
+                <li>Comodidad garantizada con <strong>estacionamiento privado</strong> integrado.</li>
+            </ul>
+            <div class="modal-fotos">
+                <img src="Doble/doble.png" onclick="zoomImg(this.src)">
+                <img src="Doble/doble2.png" onclick="zoomImg(this.src)">
+                <img src="Doble/doble3.png" onclick="zoomImg(this.src)">
+                <img src="Doble/doble4.png" onclick="zoomImg(this.src)">
+                <img src="Doble/doble5.png" onclick="zoomImg(this.src)">
+                <img src="Doble/doble6.png" onclick="zoomImg(this.src)">
+                <img src="Doble/doble7.png" onclick="zoomImg(this.src)">
+            </div>
+        </div>
+    </div>
+
+    <div id="mJacuzzi" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('mJacuzzi')">×</span>
+            <h3>Detalles Suite Con Jacuzzi</h3>
+            <p>Nuestra opción de lujo más completa, creada para transformar una estancia común en una experiencia inolvidable.</p>
+            <ul>
+                <li>Área de dormitorio principal con una majestuosa <strong>Cama King Size</strong>.</li>
+                <li>Exclusiva <strong>zona de Jacuzzi</strong> diseñada para la relajación total.</li>
+                <li>Área social privada que incluye una elegante <strong>sala de estar</strong> y <strong>mesa de billar</strong> profesional.</li>
+                <li>Sistema de TV con cable, baño con agua caliente y <strong>cochera privada</strong>.</li>
+            </ul>
+            <div class="modal-fotos">
+                <img src="Jacuzzi/jacuzzi.png" onclick="zoomImg(this.src)">
+                <img src="Jacuzzi/jacuzzi2.png" onclick="zoomImg(this.src)">
+                <img src="Jacuzzi/jacuzzi3.png" onclick="zoomImg(this.src)">
+                <img src="Jacuzzi/jacuzzi4.png" onclick="zoomImg(this.src)">
+                <img src="Jacuzzi/jacuzzi5.png" onclick="zoomImg(this.src)">
+                <img src="Jacuzzi/jacuzzi6.png" onclick="zoomImg(this.src)">
+                <img src="Jacuzzi/jacuzzi7.png" onclick="zoomImg(this.src)">
+                <img src="Jacuzzi/jacuzzi8.png" onclick="zoomImg(this.src)">
+                <img src="Jacuzzi/jacuzzi9.png" onclick="zoomImg(this.src)">
+                <img src="Jacuzzi/jacuzzi10.png" onclick="zoomImg(this.src)">
+                <img src="Jacuzzi/jacuzzi11.png" onclick="zoomImg(this.src)">
+                <img src="Jacuzzi/jacuzzi12.png" onclick="zoomImg(this.src)">
+            </div>
+        </div>
+    </div>
+
+    <div id="modalZoom" onclick="this.style.display='none'">
+        <img id="imgZoomed" src="">
+    </div>
 
     <footer>
-        <p>📍 Dirección del Hotel, Ciudad, México</p>
-        <p>&copy; 2026 Hotel & Suites - Calidad y Discreción</p>
+        <p>📍 Av. Captain Carlos G. Calles entre las calles 27 y 28, Burócrata, 83450 San Luis Río Colorado, Son.</p>
     </footer>
+
+    <script>
+        function openModal(id) { document.getElementById(id).style.display = "block"; }
+        function closeModal(id) { document.getElementById(id).style.display = "none"; }
+        function zoomImg(src) {
+            document.getElementById('imgZoomed').src = src;
+            document.getElementById('modalZoom').style.display = "flex";
+        }
+        window.onclick = function(e) { 
+            if(e.target.className === 'modal') e.target.style.display = "none"; 
+        }
+    </script>
 
 </body>
 </html>
